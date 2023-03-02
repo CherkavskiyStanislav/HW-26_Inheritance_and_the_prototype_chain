@@ -76,6 +76,12 @@ function UserType(name) {
     return arr;
 }
 
+UserType.prototype.join = {
+    join: Array.prototype.join
+}
+
 const admins = new UserType(['Mike', 'Bob', 'Nikola']);
+console.log(admins.join());
 console.log(admins.join('; '));
+console.log(admins.join(', '));
 
